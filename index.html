@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show me some patterns</title>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <img id="positionsImage" src="images/positions.png" usemap="#buttonmap"/>
+    <map name="buttonmap">
+        <area shape="circle" coords="95,176,8" alt="FarLeft" onclick="selectPattern('farLeft')">
+        <area shape="circle" coords="92,266,8" alt="BottomLeft" onclick="selectPattern('bottomLeft')">
+        <area shape="circle" coords="180,152,8" alt="Center" onclick="selectPattern('center')">
+        <area shape="circle" coords="148,246,8" alt="6By1" onclick="selectPattern('sixByOne')">
+        <area shape="circle" coords="190,256,8" alt="BottomCenter" onclick="selectPattern('bottomCenter')">
+        <area shape="circle" coords="220,245,8" alt="3By1" onclick="selectPattern('threeByOne')">
+        <area shape="circle" coords="237,149,8" alt="TopRight" onclick="selectPattern('topRight')">
+        <area shape="circle" coords="278,177,8" alt="FarRight" onclick="selectPattern('farRight')">
+        <area shape="circle" coords="248,202,8" alt="2By3" onclick="selectPattern('twoByThree')">
+        <area shape="circle" coords="249,228,8" alt="2By2" onclick="selectPattern('twoByTwo')">
+        <area shape="circle" coords="274,264,8" alt="BottomRight" onclick="selectPattern('bottomRight')">
+      </map>
+    <div id="buttonDiv">
+        <select name="patternDropdown" id="patternDropdown" onchange="selectPattern(this.value)">
+            <option value="0" selected disabled hidden>Select an Option</option>
+            <option value="farLeft">Far Left</option>
+            <option value="bottomLeft">Bottom Left</option>
+            <option value="center">Center</option>
+            <option value="sixByOne">6 by 1</option>
+            <option value="bottomCenter">Bottom Center</option>
+            <option value="threeByOne">3 by 1</option>
+            <option value="topRight">Top Right</option>
+            <option value="farRight">Far Right</option>
+            <option value="twoByThree">2 by 3</option>
+            <option value="twoByTwo">2 by 2</option>
+            <option value="bottomRight">Bottom Right</option>            
+        </select>
+        <div>
+            <button id="resetButton" onclick="resetPattern(true);">Reset</button>
+        </div>
+    </div>
+
+    <div id="imageDiv"></div>
+</body>
+</html>

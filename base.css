@@ -1,0 +1,18 @@
+#buttonDiv, #positionsImage{
+    margin-bottom: 20px;
+}
+
+.patternDiv{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.patternLabel{
+    vertical-align:middle;
+    font-size: x-large;
+    width: 125px;
+    margin-right: 10px;
+}
+
